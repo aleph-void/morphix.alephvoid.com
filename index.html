@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morphix &mdash; Morphing Wavetable Synthesizer (AUv3 / VST3)</title>
+  <meta name="description" content="Morphix is a polyphonic morphing wavetable synthesizer plugin — a from-scratch reconstruction of the lost 2005 FSR Morphite. AUv3 / VST3 / Standalone for macOS, iOS, Windows, and Linux, with 64 recovered factory presets." />
+  <link rel="icon" type="image/png" href="assets/img/app-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Morphix" />
+  <meta property="og:url" content="https://morphix.alephvoid.com/" />
+  <meta property="og:title" content="Morphix — Morphing Wavetable Synthesizer (AUv3 / VST3)" />
+  <meta property="og:description" content="A polyphonic morphing wavetable synth, reconstructed from the lost 2005 FSR Morphite. AUv3 / VST3 / Standalone for macOS, iOS, Windows, and Linux." />
+  <meta property="og:image" content="https://morphix.alephvoid.com/assets/img/app-icon.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="256" />
+  <meta property="og:image:height" content="256" />
+  <meta property="og:image:alt" content="Morphix icon" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Morphix — Morphing Wavetable Synthesizer" />
+  <meta name="twitter:description" content="A polyphonic morphing wavetable synth, reconstructed from the lost 2005 FSR Morphite. AUv3 / VST3 / Standalone." />
+  <meta name="twitter:image" content="https://morphix.alephvoid.com/assets/img/app-icon.png" />
+  <meta name="twitter:image:alt" content="Morphix icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <img class="nav-logo" src="assets/img/app-icon.png" alt="Morphix" />
+        <span>Morphix</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#specs">Specs</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#install" class="btn btn-sm btn-primary">Get Morphix</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#features">Features</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#specs">Specs</a>
+      <a href="#faq">FAQ</a>
+      <a href="#install" class="btn btn-primary">Get Morphix</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">// Morphing Wavetable Synth &middot; AUv3 / VST3</div>
+        <h1>The Morph Is<br /><span class="text-gradient">the Instrument</span></h1>
+        <p class="hero-subtitle">
+          Morphix is a polyphonic morphing wavetable synthesizer &mdash; a from-scratch
+          reconstruction of the lost 2005 <em>FSR Morphite</em>. Its architecture, parameters,
+          and complete 64-patch factory bank were reverse-engineered from the original binary
+          and rebuilt with JUCE as a modern, multi-architecture plugin in the Aleph&nbsp;Void
+          visual language.
+        </p>
+        <div class="hero-actions">
+          <a href="#install" class="btn btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Get Morphix
+          </a>
+          <a href="#features" class="btn btn-outline btn-lg">Learn More</a>
+        </div>
+        <div class="hero-platforms">
+          <span class="hero-platforms-label">Built for</span>
+          <div class="platform-icons">
+            <div class="platform-icon" title="macOS (Apple Silicon &amp; Intel)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+              <span>macOS &amp; iOS</span>
+            </div>
+            <div class="platform-icon" title="Windows">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.1L10.5 4v7.5H3V5.1zM10.5 12.5V20L3 18.9v-6.4h7.5zM11.5 3.9L21 2.5v9H11.5V3.9zM21 12.5V21.5l-9.5-1.3v-7.7H21z"/></svg>
+              <span>Windows</span>
+            </div>
+            <div class="platform-icon" title="Linux">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2.5 0-3.5 2-3.5 4.5 0 1.6.3 2.6-.6 4C6.8 12 5.5 13.6 5.5 16c0 .8-.6 1.4-1 2.2-.4.9.1 1.6 1 1.7.8.1 1.7.6 2.6 1 .9.4 1.6-.1 2-.7.9.1 1.9.1 2.8 0 .4.6 1.1 1.1 2 .7.9-.4 1.8-.9 2.6-1 .9-.1 1.4-.8 1-1.7-.4-.8-1-1.4-1-2.2 0-2.4-1.3-4-2.4-5.5-.9-1.4-.6-2.4-.6-4C15.5 4 14.5 2 12 2zm-1.3 4.2c.4 0 .7.4.7.9s-.3.9-.7.9-.7-.4-.7-.9.3-.9.7-.9zm2.6 0c.4 0 .7.4.7.9s-.3.9-.7.9-.7-.4-.7-.9.3-.9.7-.9z"/></svg>
+              <span>Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plugin Mockup -->
+      <div class="hero-visual">
+        <div class="plugin-mockup">
+          <div class="plugin-header">
+            <div class="plugin-dots"><span></span><span></span><span></span></div>
+            <span class="plugin-title">Morphix &middot; Glass Voices</span>
+          </div>
+          <div class="plugin-tabs" aria-hidden="true">
+            <span class="active">Osc</span><span>Filter</span><span>Env</span><span>LFO</span><span>FX</span><span>Pitch</span>
+          </div>
+          <div class="plugin-body" aria-hidden="true">
+            <div class="knob-row">
+              <div class="knob"><span class="knob-dial" style="--r:-100deg"></span><span class="knob-cap">Morph</span></div>
+              <div class="knob"><span class="knob-dial" style="--r:30deg"></span><span class="knob-cap">Cutoff</span></div>
+              <div class="knob"><span class="knob-dial" style="--r:120deg"></span><span class="knob-cap">Reso</span></div>
+              <div class="knob"><span class="knob-dial" style="--r:-20deg"></span><span class="knob-cap">Env</span></div>
+            </div>
+            <div class="morph-screen">
+              <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                <path d="M0 30 H200 M50 0 V60 M100 0 V60 M150 0 V60" stroke="#6d28d9" stroke-width="0.4" opacity="0.45" fill="none"/>
+                <path d="M0 30 Q25 4 50 30 T100 30 T150 30 T200 30" fill="none" stroke="#6d28d9" stroke-width="1" opacity="0.4"/>
+                <path d="M0 30 C12 6 24 54 36 30 S60 6 72 30 S96 54 108 30 S132 6 144 30 S168 54 180 30 S200 18 200 30" fill="none" stroke="#8b5cf6" stroke-width="1.6"/>
+              </svg>
+            </div>
+            <div class="morph-meta">
+              <span>Wavetable</span><span class="accent">pos 0.42</span><span>8&nbsp;voices</span>
+            </div>
+            <div class="knob-row">
+              <div class="knob sm"><span class="knob-dial" style="--r:10deg"></span><span class="knob-cap">Atk</span></div>
+              <div class="knob sm"><span class="knob-dial" style="--r:-60deg"></span><span class="knob-cap">Dec</span></div>
+              <div class="knob sm"><span class="knob-dial" style="--r:80deg"></span><span class="knob-cap">Sus</span></div>
+              <div class="knob sm"><span class="knob-dial" style="--r:150deg"></span><span class="knob-cap">Rel</span></div>
+              <div class="knob sm"><span class="knob-dial" style="--r:-140deg"></span><span class="knob-cap">Rate</span></div>
+              <div class="knob sm"><span class="knob-dial" style="--r:50deg"></span><span class="knob-cap">Flng</span></div>
+            </div>
+          </div>
+          <div class="plugin-footer" aria-hidden="true">
+            <span class="plugin-led on"></span> 48 kHz &middot; 29 params &middot; Aleph Void 1.0.0
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// Features</span>
+        <h2>A Lost Synth, <span class="text-gradient">Rebuilt Modern</span></h2>
+        <p>Morphix mirrors the original Morphite signal path parameter-for-parameter, then ships it everywhere a modern host runs &mdash; with a JUCE-free DSP core that's tested in CI on every build.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12c3-9 6 9 9 0s6 9 9 0"/></svg>
+          </div>
+          <h3>Morphing Wavetable Oscillator</h3>
+          <p>A single morph control sweeps continuously through the wavetable, smoothly blending one waveform into the next &mdash; the heart of the Morphite sound, faithfully re-implemented.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 4 8-9"/><path d="M3 21h18"/></svg>
+          </div>
+          <h3>State-Variable Filter</h3>
+          <p>Cutoff, resonance, dedicated filter envelope amount, and key-tracking &mdash; driven by its own ADSR for everything from soft sweeps to snappy plucks.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18 L8 4 L13 18 M13 18 L21 18"/></svg>
+          </div>
+          <h3>Dual ADSR &amp; Tempo-Synced LFO</h3>
+          <p>Independent amplitude and filter envelopes, plus a tempo-syncable LFO routable to morph and cutoff for evolving, in-time movement.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12c4-6 12 6 16 0"/><path d="M4 17c4-6 12 6 16 0"/></svg>
+          </div>
+          <h3>Stereo Flanger</h3>
+          <p>A built-in flanger on the output adds width and motion, finishing the chain with the same modulation character as the original.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg>
+          </div>
+          <h3>64 Recovered Factory Presets</h3>
+          <p>The complete original bank, recovered from the binary and shipped as standard Steinberg <code>.vstpreset</code> files &mdash; also exposed as host programs. Import and export your own from the UI.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <h3>AUv3, VST3 &amp; Standalone</h3>
+          <p>VST3 and a Standalone app everywhere, plus AUv3 on macOS and iOS/iPadOS. Load it in Logic, GarageBand, Ableton Live, Cubase, AUM &mdash; any AU / VST3 host.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture / Signal flow -->
+  <section id="architecture" class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// Signal Path</span>
+        <h2>How the Voice <span class="text-gradient">Is Wired</span></h2>
+        <p>One morph oscillator into a state-variable filter, an amp stage, and a stereo flanger &mdash; with two envelopes and a tempo-synced LFO doing the modulation. The same path the original Morphite used, re-derived from its parameters.</p>
+      </div>
+
+      <div class="signal-flow">
+        <div class="flow-row">
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12c3-9 6 9 9 0s6 9 9 0"/></svg>
+            <span class="node-name">Morph Osc</span>
+            <span class="node-sub">wavetable</span>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 4 8-9"/></svg>
+            <span class="node-name">SV Filter</span>
+            <span class="node-sub">cutoff · reso</span>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18 L8 4 L13 18"/><path d="M13 18 H21"/></svg>
+            <span class="node-name">Amp VCA</span>
+            <span class="node-sub">amp ADSR</span>
+          </div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div>
+          <div class="flow-node">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12c4-6 12 6 16 0"/><path d="M4 17c4-6 12 6 16 0"/></svg>
+            <span class="node-name">Flanger</span>
+            <span class="node-sub">stereo out</span>
+          </div>
+        </div>
+        <div class="flow-mods">
+          <span class="flow-mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18 L8 4 L13 18"/><path d="M13 18 H21"/></svg><strong>Filter env</strong> &rarr; cutoff</span>
+          <span class="flow-mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18 L8 4 L13 18"/><path d="M13 18 H21"/></svg><strong>Amp ADSR</strong> &rarr; VCA</span>
+          <span class="flow-mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12c3-6 6 6 9 0s6-6 9 0"/></svg><strong>Tempo LFO</strong> &rarr; morph / cutoff</span>
+          <span class="flow-mod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M6 8l6-5 6 5"/></svg><strong>Pitch</strong> &rarr; bipolar tune / fine</span>
+        </div>
+      </div>
+
+      <div class="workflow-steps">
+        <h3 class="workflow-title">Getting Started</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Install</h4>
+              <p>Drop the VST3 or AUv3 into your plugin folder, or run the Standalone app on its own.</p>
+            </div>
+          </div>
+          <div class="step-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Load a Patch</h4>
+              <p>Open the preset browser and pick from the 64 recovered factory programs.</p>
+            </div>
+          </div>
+          <div class="step-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Morph</h4>
+              <p>Play, then sweep the morph control &mdash; by hand or with the LFO &mdash; to move through the wavetable.</p>
+            </div>
+          </div>
+          <div class="step-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Save</h4>
+              <p>Export the result as a <code>.vstpreset</code> to reload anywhere, in any VST3 host.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section id="screenshots" class="demos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// Screenshots</span>
+        <h2>The Same Synth, <span class="text-gradient">Every Screen</span></h2>
+        <p>The Morphix editor in the Aleph&nbsp;Void visual language &mdash; as a plugin in your DAW on macOS, and as an AUv3 on iPhone and iPad. Click any shot to enlarge.</p>
+      </div>
+
+      <div class="demo-feature">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/TzYb_O4_0F4"
+          title="Morphix demo"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+
+      <h3 class="shot-group-label">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        macOS &middot; AUv3, VST3 &amp; Standalone
+      </h3>
+
+      <div class="shot-grid" id="shots-macos">
+        <figure class="shot">
+          <img src="assets/screenshots/macos/full-window.png" alt="Morphix full plugin window on macOS showing the oscillator, LFO, filter, envelopes, pitch, and output sections" loading="lazy" />
+          <figcaption>Full editor &amp; keyboard</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="shot-group-label">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        iOS / iPadOS &middot; AUv3 &amp; Standalone
+      </h3>
+
+      <div class="shot-grid" id="shots-ios">
+        <figure class="shot">
+          <img src="assets/screenshots/ios/oscillator-lfo.png" alt="Morphix on iPad showing the oscillator, LFO, filter, and pitch sections" loading="lazy" />
+          <figcaption>Oscillator, LFO &amp; filter</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/screenshots/ios/envelopes-pitch.png" alt="Morphix on iPad showing the amp and filter envelopes, pitch with bend, and output sections over the keyboard" loading="lazy" />
+          <figcaption>Envelopes, pitch &amp; output</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs -->
+  <section id="specs" class="hardware">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// Specs</span>
+        <h2>What's <span class="text-gradient">Under the Hood</span></h2>
+        <p>Morphix is a single, self-contained instrument plugin &mdash; no extra runtime, no account, no network.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-row"><span class="spec-key">Synthesis</span><span class="spec-val">Polyphonic morphing wavetable</span></div>
+        <div class="spec-row"><span class="spec-key">Parameters</span><span class="spec-val">29, mirroring the original</span></div>
+        <div class="spec-row"><span class="spec-key">Filter</span><span class="spec-val">State-variable + filter env</span></div>
+        <div class="spec-row"><span class="spec-key">Envelopes</span><span class="spec-val">Amp ADSR + filter ADSR</span></div>
+        <div class="spec-row"><span class="spec-key">Modulation</span><span class="spec-val">Tempo-syncable LFO</span></div>
+        <div class="spec-row"><span class="spec-key">Effects</span><span class="spec-val">Stereo flanger</span></div>
+        <div class="spec-row"><span class="spec-key">Factory presets</span><span class="spec-val">64 (.vstpreset + programs)</span></div>
+        <div class="spec-row"><span class="spec-key">Formats</span><span class="spec-val">AUv3 · VST3 · Standalone</span></div>
+        <div class="spec-row"><span class="spec-key">macOS</span><span class="spec-val">Universal arm64 + x86_64</span></div>
+        <div class="spec-row"><span class="spec-key">iOS / iPadOS</span><span class="spec-val">AUv3 (iOS 13+)</span></div>
+        <div class="spec-row"><span class="spec-key">Windows</span><span class="spec-val">x64 + ARM64</span></div>
+        <div class="spec-row"><span class="spec-key">Linux</span><span class="spec-val">x86_64 + aarch64</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section id="install" class="install">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// Get Morphix</span>
+        <h2>Download <span class="text-gradient">Morphix</span></h2>
+        <p>Builds are on the way. Pick your platform below &mdash; we'll light these up the moment each release is ready.</p>
+      </div>
+      <div class="install-grid">
+        <a href="https://apps.apple.com/app/aleph-void-morphix/id6757000000" class="install-card is-soon">
+          <span class="install-badge">Coming soon</span>
+          <svg class="install-platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <h3>macOS &amp; iOS</h3>
+          <p>AUv3 / VST3 / Standalone</p>
+          <span class="install-btn">App Store</span>
+        </a>
+        <a href="https://github.com/aleph-void/Aleph-Void-Morphix/releases" class="install-card" target="_blank" rel="noopener">
+          <svg class="install-platform-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.4 9.4 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.04 10.04 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          <h3>VST3 &amp; Standalone</h3>
+          <p>macOS · Windows · Linux</p>
+          <span class="install-btn">GitHub Releases</span>
+        </a>
+      </div>
+      <p class="install-note">Want to know when a build drops? Email <a href="mailto:contact@alephvoid.com?subject=Morphix">contact@alephvoid.com</a> and we'll let you know.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">// FAQ</span>
+        <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What is Morphix?</summary>
+          <p>Morphix is a polyphonic morphing wavetable synthesizer plugin. It's a from-scratch reconstruction of the <em>FSR Morphite</em>, a 2005 Windows VST whose source code was lost &mdash; its architecture, parameters, and full 64-patch factory bank were reverse-engineered from the original binary and re-implemented with JUCE as a modern plugin.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What does "morphing wavetable" mean?</summary>
+          <p>A single morph control sweeps continuously through a wavetable, smoothly blending one waveform into the next instead of switching abruptly. You can move it by hand or drive it with the tempo-synced LFO for evolving, animated timbres &mdash; that motion is the signature of the original instrument.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Which plugin formats and platforms are supported?</summary>
+          <p>VST3 and a Standalone app on every platform, plus AUv3 on macOS and iOS/iPadOS. Builds target macOS (universal arm64 + x86_64), iOS / iPadOS, Windows (x64 + ARM64), and Linux (x86_64 + aarch64).</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will it work on my iPhone or iPad?</summary>
+          <p>Yes. Morphix ships as an AUv3 on iOS and iPadOS (iOS 13+), so you can host it in GarageBand, AUM, Cubasis, and other AUv3 hosts &mdash; or run the Standalone app.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are there factory presets?</summary>
+          <p>Yes &mdash; the complete original 64-patch bank, recovered from the binary and shipped as standard Steinberg <code>.vstpreset</code> files and exposed as host programs. You can also import and export your own <code>.vstpreset</code> files straight from the plugin's UI.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it collect any data?</summary>
+          <p>No. Morphix does no networking and collects nothing &mdash; everything happens locally on your device. There's no account, no telemetry, and no remote code. See the <a href="privacy.html">Privacy Policy</a> for the full breakdown.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I report a bug or get help?</summary>
+          <p>Open an issue on our <a href="https://github.com/aleph-void/morphix.alephvoid.com/issues" target="_blank" rel="noopener">GitHub issue tracker</a>, or head to the <a href="support.html">Support page</a> to email us. Include your OS version, host / DAW, plugin format, and steps to reproduce.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/img/app-icon.png" alt="Morphix" />
+          <span>Morphix</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#features">Features</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#faq">FAQ</a>
+          <a href="support.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="https://github.com/aleph-void/morphix.alephvoid.com/issues" target="_blank" rel="noopener">Report a Bug</a>
+          <a href="https://alephvoid.com" target="_blank" rel="noopener">Aleph Void</a>
+        </div>
+        <p class="footer-copy">Created by <a href="https://alephvoid.com" target="_blank" rel="noopener">Aleph Void LLC</a>. &copy; 2026 Morphix. An independent reconstruction; the original <em>FSR Morphite</em> is referenced only as the historical source of the recovered design.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

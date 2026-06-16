@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Email support
+    url: mailto:support@alephvoid.com
+    about: Prefer not to file a public issue? Email the team directly.
+  - name: Morphix website
+    url: https://morphix.alephvoid.com
+    about: Features, screenshots, support, and the privacy policy.
