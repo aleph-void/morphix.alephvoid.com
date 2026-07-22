@@ -1401,7 +1401,7 @@ code {
 /* Two demos side by side (AUv3 + VST3) */
 .demo-pair {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto 56px;
