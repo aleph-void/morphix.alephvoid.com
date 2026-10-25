@@ -1,5 +1,7 @@
 # morphix.alephvoid.com
 
+[![Sponsor Aleph Void](https://img.shields.io/badge/Sponsor-Aleph%20Void-EA4AAA?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/aleph-void)
+
 Marketing site for **Morphix** — a polyphonic morphing wavetable synthesizer plugin
 (AUv3 / VST3 / Standalone), a from-scratch reconstruction of the lost 2005 *FSR Morphite*,
 themed in the [Aleph Void](https://alephvoid.com) visual language.
